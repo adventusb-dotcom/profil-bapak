@@ -21,7 +21,7 @@
 
 body {
     min-height: 100vh;
-    background: url('assist/bg-keyboard.png') no-repeat center center/cover;
+    background: url('bg-keyboard.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,3 +199,4 @@ body {
     .text h1 { font-size: 42px; }
     .text h2 { font-size: 24px; }
 }
+
