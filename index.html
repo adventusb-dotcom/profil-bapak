@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Marianus Sudin</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container fade-in">
+
+        <!-- Header Atas -->
+        <div class="top-bar slide-down">
+            <div class="label">
+                <span class="icon">🏠</span>
+                <p>Bisnis Keluarga</p>
+            </div>
+
+            <!-- Navigasi Menu -->
+            <nav class="menu" id="menu">
+                <a href="#">Profil</a>
+                <a href="#">Data Diri</a>
+                <a href="#">Riwayat</a>
+                <a href="#">Pendidikan</a>
+                <a href="#">Pengalaman</a>
+                <a href="#">Kontak</a>
+            </nav>
+
+            <!-- Tombol Menu untuk HP -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+        </div>
+
+        <!-- Konten Utama -->
+        <div class="content">
+            <div class="text slide-left">
+                <h1>Profil</h1>
+                <h2>Marianus Sudin</h2>
+                <p class="author">Disusun Oleh : Adventus</p>
+            </div>
+
+            <div class="image slide-right">
+                <img src="assist/marianus.png" alt="Foto Marianus Sudin">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Toggle menu untuk tampilan HP
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

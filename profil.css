@@ -1,0 +1,201 @@
+/* ==== ANIMASI ==== */
+.fade-in { animation: fadeIn 1.2s ease forwards; opacity: 0; }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
+
+.slide-down { animation: slideDown 1s ease forwards; opacity: 0; }
+@keyframes slideDown { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.slide-left { animation: slideLeft 1.2s ease forwards; opacity: 0; }
+@keyframes slideLeft { from { transform: translateX(-40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+.slide-right { animation: slideRight 1.2s ease forwards; opacity: 0; }
+@keyframes slideRight { from { transform: translateX(40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* ==== DASAR ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('assist/bg-keyboard.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    color: #fff;
+}
+
+/* Lapisan gelap agar teks tetap jelas */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.container {
+    width: 950px;
+    max-width: 100%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    padding: 40px;
+    z-index: 1;
+}
+
+/* ==== HEADER ==== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2E2A8A;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ==== MENU ==== */
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #E6F2FF;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.menu a:hover {
+    color: #00AEEF;
+    border-bottom: 2px solid #00AEEF;
+    transform: translateY(-2px);
+}
+
+/* Tombol toggle untuk HP */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: #E6F2FF;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ==== KONTEN ==== */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.text h1 {
+    font-size: 64px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text h2 {
+    font-size: 36px;
+    color: #A5D8FF;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.author {
+    font-size: 16px;
+    color: #E0E0E0;
+    font-weight: 500;
+}
+
+/* ==== FOTO ==== */
+.image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #00AEEF;
+    box-shadow: 0 0 20px rgba(0,174,239,0.6);
+    transition: 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 992px) {
+    .container {
+        padding: 30px;
+    }
+
+    .text h1 { font-size: 48px; }
+    .text h2 { font-size: 28px; }
+}
+
+@media (max-width: 768px) {
+    .menu { 
+        display: none; 
+        position: absolute;
+        top: 60px; right: 30px;
+        background: rgba(0,0,0,0.8);
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .menu.active { display: flex; }
+
+    .menu a {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu-toggle { display: block; }
+
+    .content { 
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .image img {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+
+    .text h1 { font-size: 42px; }
+    .text h2 { font-size: 24px; }
+}
