@@ -25,17 +25,15 @@
 
   <!-- ===== Favicon ===== -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Marianus Sudin</title>
-  <link rel="stylesheet" href="profil.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak Kami</title>
+  <link rel="stylesheet" href="profil.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<body>
   <div class="stars" id="stars"></div>
-
-
-  
+  <!-- ===== Navbar ===== -->
   <nav class="navbar">
     <div class="logo">🌴 Bisnis Keluarga</div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
@@ -50,16 +48,40 @@
     </ul>
   </nav>
 
-  <main class="profile-card">
-    <img src="marianus.png" alt="Foto Marianus Sudin" class="profile-pic">
-    <h1>Marianus Sudin</h1>
-    <h2>Petani Sawit</h2>
-    <p>
-      Sawit dari Bapak Marianus Sudin ini dikelola sendiri oleh keluarga melalui sistem bisnis digital hasil panen.
-    </p>
-    <footer class="footer">© 2025 Disusun oleh Adventus</footer>
-  </main>
+  <!-- ===== Konten Utama ===== -->
+  <section class="profile-card" style="margin-top: 120px;">
+    <h1>Hubungi Kami</h1>
+    <p>Anda dapat menghubungi kami melalui email atau WhatsApp menggunakan formulir di bawah ini.</p>
 
-  <script src="script.js"></script>
+    <!-- ===== Formulir Kontak ===== -->
+    <form action="https://formspree.io/f/mdkpqbqk" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Nama Anda" required />
+        <input type="email" name="email" placeholder="Email Anda" required />
+        <textarea name="message" rows="5" placeholder="Pesan Anda..." required></textarea>
+        <input type="hidden" name="_next" value="terkirim.html">
+        <button type="submit">Kirim Pesan</button>
+    </form>
+
+
+    <!-- ===== Tombol WhatsApp ===== -->
+    <div class="whatsapp-contact">
+      <p>Atau hubungi langsung via WhatsApp:</p>
+      <a href="https://wa.me/6281521511869" target="_blank" class="wa-button">💬 Chat via WhatsApp</a>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Dusun%20Sebangkang,%20Desa%20Laja%20Sandang,%20Kecamatan%20Empanang&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  </section>
+
+
+
+  
+  <footer class="footer">© 2025 Disusun oleh Adventus</footer>
 </body>
 </html>
