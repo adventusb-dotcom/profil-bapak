@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adventusb-dotcom.github.io/profil-bapak/sitemap.xml
